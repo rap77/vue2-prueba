@@ -1,8 +1,25 @@
-import Vue from 'vue'
-import App from './App.vue'
+import Vue from 'vue';
+import App from './App.vue';
+import router from "./router";
 
-Vue.config.productionTip = false
+//import 'jquery';
+
+//import 'bootstrap';
+//import 'bootstrap/dist/css/bootstrap.min.css';
+
+import { library } from '@fortawesome/fontawesome-svg-core';
+import { faCoffee, faCaretRight, faPlay } from '@fortawesome/free-solid-svg-icons';
+import { FontAwesomeIcon } from '@fortawesome/vue-fontawesome';
+
+library.add(faCoffee);
+library.add(faCaretRight);
+library.add(faPlay);
+
+Vue.component('font-awesome-icon', FontAwesomeIcon);
+
+Vue.config.productionTip = false;
 
 new Vue({
   render: h => h(App),
-}).$mount('#app')
+  router,
+}).$mount('#app');
